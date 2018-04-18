@@ -70,6 +70,11 @@ namespace Avalonia.Rendering.SceneGraph
         IReadOnlyList<IRef<IDrawOperation>> DrawOperations { get; }
 
         /// <summary>
+        /// Gets the opacity of the scene graph node.
+        /// </summary>
+        double Opacity { get; }
+
+        /// <summary>
         /// Sets up the drawing context for rendering the node's geometry.
         /// </summary>
         /// <param name="context">The drawing context.</param>
@@ -93,5 +98,7 @@ namespace Avalonia.Rendering.SceneGraph
         /// to hit test children they must be hit tested manually.
         /// </remarks>
         bool HitTest(Point p);
+
+        bool Disposed { get; }
     }
 }
